@@ -1,0 +1,485 @@
+UNIT 2
+
+
+Divisble by 7:
+x=int(input("Enter a number: "))
+if x%7==0:
+    print('Given number {} is divisible by 7'.format(x))
+else:
+    print("End of program")
+
+
+
+Marks secured distinction:
+a=int(input("Enter marks obtained: "))
+if a>75:
+    print("User secured Distinction")
+else:
+    print("User did not secure Distinction")
+
+
+
+
+Balance Low:
+a=int(input("Enter balance in your account: "))
+if a>1000:
+    print("Sufficient Balanc")
+else:
+    print("Balance is low")
+
+
+
+Nested if (positive and multiple of 5):
+x=int(input("Enter value of x: "))
+if x>0:
+    if(x%5==0):
+        print("X is a multiple of 5")
+    else:
+        print("X is not a multiple of 5")
+else:
+    print("X is negative")
+
+
+
+
+Admission Criteria:
+x=float(input("Enter percentage of class 12th: "))
+if x>60:
+    y=float(input("Enter JEE Mains Percentile: "))
+    if y>=85:
+            print("You're eligible for admission is B.Tech Computer Science and Engineering")
+    else:
+            print("Sorry you're not eligible for admission(JEE mains criteria not fulfilled)")
+else:
+    print("Sorry you're not eligible(Basic class 12th criteria not fulfilled)")
+
+
+Greatest Number :
+x=int(input("Enter the value of X: "))
+y=int(input("Enter the value of Y: "))
+z=int(input("Enter the value of Z: "))
+if (x>y & x>z):
+    print("The Number",x,"is the greatest")
+elif (y>x & y>z):
+    print("The Number",y,"is the greatest")
+else:
+    print("The Number",z,"is the greatest")
+
+
+Character/Alphabet:
+print("Enter '0' for exit.")
+ch=input("Enter any character: ")
+if ch=='0':
+    exit()
+elif (ch>='A' and ch<='Z')or(ch>='a' and ch<='z'):
+    print("Given Character {} is an alphabet".format(ch))
+elif (ch>='1' and ch<='9'):
+    print("Given Character {} is a number".format(ch))
+else:
+    print("{} is not an alphabet nor a digit".format(ch))
+
+
+
+
+LEAP YEAR:
+a=int(input("Enter the year: "))
+if a%4==0 and a%100!=0:
+    print(a,"is a leap year")
+elif a%400==0:
+    print(a,"is a leap year")
+else:
+    print(a,"is not a leap year")
+
+
+
+
+Sides of a Triangle:
+a=int(input("Enter length of first side"))
+b=int(input("Enter length of second side"))
+c=int(input("Enter length of third side"))
+if a==b and b==c and a==c:
+    print("Equilateral Triangle")
+elif a!=b and b!=c and a!=c:
+    print("Scalene Triangle")
+else:
+    print("Isoceles Triangle")
+
+
+Maximum number in one line:
+a=int(input("Enter first number: "))
+b=int(input("Enter second number: "))
+max=a if a>b else b
+print("Max = ",max)
+
+
+
+Even number one line code:
+a=int(input("Enter first number: "))
+print("Number is even" if a%2==0 else "Number is odd")
+
+
+
+COUNT THE ODD NUMBERS:
+n=int(input("Enter n:"))
+i=1
+count=0
+while i<=n:
+    if i%2!=0:
+        count=count+1
+    i=i+1
+print("Count of odd numbers :",count)
+
+
+
+FACTORIAL OF A NUMBER:
+a=int(input("Enter a number :"))
+i=1
+fact=1
+if a==0:
+    print("Factorial = 1")
+elif a<0:
+    print("Factorial of negative avlue not possible")
+else:
+    while i<=a:
+        fact=fact*i
+        i=i+1
+    print("Factorial is :",fact)
+
+
+
+FACTORIAL REVERSE LOOP:
+a=int(input("Enter a number :"))
+i=a
+fact=1
+if a==0:
+    print("Factorial = 1")
+elif a<0:
+    print("Factorial of negative avlue not possible")
+else:
+    while i>=1:
+        fact=fact*i
+        i=i-1
+    print("Factorial is :",fact)
+
+
+
+REVERSE OF A NUMBER:
+n=int(input("Enter a number:"))
+a=n
+rev=0
+rem=0
+while n!=0:
+    rem=n%10
+    rev=rev*10+rem
+    n=n//10
+print("Reverse number :",rev)
+
+
+
+
+PALINDROME NUMBER:
+n=int(input("Enter a number:"))
+a=n
+rev=0
+rem=0
+while n!=0:
+    rem=n%10
+    rev=rev*10+rem
+    n=n//10
+if a==rev:
+    print("Number is Palindrome")
+else:
+    print("Number is not Palindrome")
+
+
+ARMSTRONG NUMBER (HW)
+import math
+n=int(input("Enter a number:"))
+c=str(n)
+l=len(c)
+arm=n
+sum=0
+while n!=0:
+    rem=n%10
+    sum=sum+(math.pow(rem,l))
+    n = n // 10
+    print(sum)
+if arm==sum:
+    print("Armstrong Number")
+else:
+    print("Not an Armstrong Number")
+
+
+SUM OF 0-Nth number:
+num=int(input("num:"))
+i=0
+sum=0
+while(i<=num)
+    sum=sum+i
+    i=i+1
+else:
+    while(num<=0):
+        sum=sum+num
+        num=num+1
+print("sum=",sum)
+
+
+GCD PROGRAM:
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+if a==0 or b==0:
+    print("Value must be non zero")
+else:
+    if a<b:
+        result=a
+    else:
+        result=b
+    while result:
+        if a%result ==0 and b%result==0:
+            break
+        result=result-1
+print("gcd: ",result)
+
+
+
+
+FIBBONACCI SERIES:
+n=int(input("Enter the value of n: "))
+a=0
+b=1
+i=0
+while (i<=n):
+    print(a,end=" ")
+    res=a+b
+    a=b
+    b=res
+    i=i+1
+
+
+LINEAR COLOUR SEARCH:
+color=str(input("Enter colour name: "))
+l1=["red","green","violet","indigo","orange","yellow","blue"]
+for i in l1:
+    if i==color:
+        print("The colour is found")
+else:
+    print("The colour is not found, updating the new list")
+    l1.append(color)
+    print(l1)
+
+
+
+FILTRATION - from the given set of colours, print the colours which start with "y"
+
+l1=["red","green","violet","indigo","orange","yellow","blue","hdgyus"]
+for i in l1:
+    if i[0]=='y':
+
+        print(i)
+
+
+
+MULTIPLICATION TABLE USING FOR LOOP:
+a=int(input("Enter a number: "))
+b=1
+for i in range(a,a*11,a*b):
+    b=b+1
+    print(i)
+
+
+
+PRIME AND COMPOSITE NUMBER:
+a=int(input("Enter a number: "))
+if a>1:
+    for i in range(2,(a//2)+1):
+        if a%i==0:
+            print("Composite Number")
+            break
+    else:
+            print("Prime Number")
+else:
+    print(a,"is a Composite number")
+
+
+PRINT PI UPTO Nth PLACE USING FOR LOOP:
+import math
+n=int(input("n: "))
+b=math.pi
+for i in range(1,n+1):
+    print("{:.{}f}".format(b,i))
+
+
+PARENTHESIS NUMBER AND ERROR USING FOR LOOPS:
+a=str(input("Enter paranthesis: "))
+x=0
+y=0
+length=len(a)
+for i in range(0,length):
+    if(a[i]=="("):
+        x=x+1
+    elif(a[i]==")"):
+        y=y+1
+if(x==y):
+    print("Valid and Depth =",x)
+elif y>x:
+    print("Not valid and errors =",y-x)
+else:
+    print("Not valid and errors =",x-y)
+
+
+MULTIPLICATION TABLE USING NESTED LOOPS:
+print("Multiplication Table")
+n=int(input("Enter the number upto which you want to print the table: "))
+m=int(input("Enter the multiples: "))
+print(" |", end='')
+for j in range (1,n+1):
+    print(" ", j, end='')
+print()
+print("-----------------------------------------------")
+for i in range (1,n+1):
+    print(i, "|", end='')
+    for j in range(1,m+1):
+        print(format(i*j,"4d"),end='')
+    print()
+
+
+
+PATTERN 1:
+n=int(input("Rows: "))
+m=int(input("Columns: "))                                  **********************************************
+                                                           **********************************************
+for i in range(1,n+1):
+    for j in range(1,m+1):
+        print("*",end='')
+    print()
+
+
+
+
+REVERSE PATTERN:
+*****
+****
+***
+**
+*
+n=int(input("Rows: "))
+for i in range(n,0,-1):
+    for j in range(1,i+1):
+        print("*",end='')
+    print()
+
+
+
+REVERSE NUMBER:
+1234
+123
+12
+1
+
+n=int(input("Rows: "))
+for i in range(n,0,-1):
+    for j in range(1,i+1):
+        print(j,end='')
+    print()
+
+
+
+ALPHABET PATTERN:
+A
+AB
+ABC
+ABCD
+ABCDE
+val=65
+n=int(input("Enter number of rows: "))
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(chr(val),end='')
+        val=val+1
+    val=65
+    print()
+
+
+DISPLAY ALL PRIME NUMBERS FROM N TO M:
+flag=0
+n=int(input("Enter n(>=2): "))
+m=int(input("Enter m(>=2): "))
+print("List of prime numbers are: ")
+for i in range(n,m+1):
+    for j in range(2,(i//2)+1):
+        if i%j==0:
+            flag=1
+    if flag==0:
+        print(i)
+    flag=0
+
+
+
+
+TRANSPOSE OF A MATRIX:
+matrix=[[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+matrix1=[[0,0,0],[0,0,0],[0,0,0],[0,0,0]]
+print("Original matrix: ",matrix)
+for i in range(3):
+    for j in range(4):
+        matrix1[j][i]=matrix[i][j]
+print("Trapose: ",matrix1)
+
+LOOP TERMINATES ON THE FIRST MULTIPLE OF 5(BREAK STATEMENT):
+num=10
+i=1
+while(i<=num):
+    if i%5==0:
+        break
+    print(i)
+    i=i+1
+
+
+
+PRINTS ONLY ODD NUMBER (CONTINUE STATEMENT):
+for num in range(1,10):
+    if (num%2==0):
+        continue
+    print(num)
+
+
+
+UNAWARE OF CODE (PASS STATEMENT):
+a=10
+b=20
+if a<b:
+    pass
+else:
+    print("b<a")
+
+
+
+PRINTING ONLY THE EVEN NUMBERS(PASS STATEMENT APPROACH):
+numbers=[1,2,4,3,6,5,7,10,9]
+for num in numbers:
+    if num%2!=0:
+        pass
+    else:
+        print(num)
+
+
+
+
+VOWELS(USAGE OF WHILE TRUE: BREAK,CONTINUE):
+vowels="aeiouAEIOU"
+while True:
+    char1=input("vowel, or 9 to quit: ")
+    if char1.isalpha() or char1 =="9":
+        if char1 =="9":
+            break
+        if char1 in vowels:
+            print("vowel")
+        else:
+            print("not vowel")
+    else:
+        print("wrong input")
+        continue
+
+
+
+
